@@ -1,0 +1,13 @@
+## Interface: 110007
+## Title: Grid2 |cfeff7d0aStatus BleedDebuffs|r
+## Notes: Grid2 status to track physical damage over time debuffs.
+## Author: MiCHaeL
+## Version: @project-version@
+## IconTexture: Interface/AddOns/Grid2/media/iconsmall.tga
+## X-Curse-Project-ID:
+## X-Wago-ID:
+## Dependencies: Grid2
+
+Libs\LibDispel-1.0\LibDispel.lua
+
+Grid2StatusBleedDebuffs.lua

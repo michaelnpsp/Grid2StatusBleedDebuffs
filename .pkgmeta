@@ -1,0 +1,6 @@
+package-as: Grid2StatusBleedDebuffs
+
+externals:
+ Libs/LibDispel-1.0:
+    url: https://github.com/tukui-org/LibDispel.git
+    commit: main
