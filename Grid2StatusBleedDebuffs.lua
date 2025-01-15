@@ -1,6 +1,11 @@
 --[[ Bleed custom debuffType status for Grid2 addon by MiCHaEL --]]
 local Grid2 = Grid2
 
+if Grid2.RegisterDebuffTypeSpells==nil then
+	print("Grid2StatusBleedDebuffs Error: This plugin requires Grid2 v2.6.80 or higher. You must update Grid2 addon to the latest version.")
+	return
+end
+
 -- update supported bleed dispel depending of player talents
 if Grid2.playerClass=='EVOKER' then
 	Grid2:PreHookFunc( Grid2, 'UpdatePlayerDispelTypes', function(self)
