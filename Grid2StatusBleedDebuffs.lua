@@ -8,10 +8,16 @@ if Grid2.playerClass=='EVOKER' then
 	end )
 end
 
+-- register make options function
+Grid2:PostHookFunc( Grid2, 'LoadOptions', function()
+	Grid2Options:RegisterStatusOptions("debuffType-Bleed", "debuff", Grid2Options.MakeStatusCustomDebuffTypeOptions, {groupOrder = 11})
+end )
+
 -- register status setup function
 Grid2.setupFunc["debuffType-Bleed"] = function(baseKey, dbx)
-	local debuffs = LibStub("LibDispel-1.0", true):GetBleedList()
-	return Grid2.setupFunc.debuffType(baseKey, dbx, debuffs)
+	Grid2:RegisterDebuffTypeSpells(dbx.subType, LibStub("LibDispel-1.0", true):GetBleedList(), false)
+	Grid2:RegisterDebuffTypeSpells(dbx.subType, dbx.debuffsList, true)
+	return Grid2.setupFunc.debuffType(baseKey, dbx)
 end
 
 Grid2:DbSetStatusDefaultValue( "debuff-Bleed",  { type = "debuffType", subType = "Bleed", setupFunc = 'debuffType-Bleed', color1 = {r=1, g=.2, b=.6,a=1 } } )
