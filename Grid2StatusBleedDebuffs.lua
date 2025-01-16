@@ -2,7 +2,7 @@
 local Grid2 = Grid2
 
 if Grid2.RegisterDebuffTypeSpells==nil then
-	print("Grid2StatusBleedDebuffs Error: This plugin requires Grid2 v2.6.80 or higher. You must update Grid2 addon to the latest version.")
+	print("Grid2StatusBleedDebuffs Error: This plugin requires Grid2 v2.8.68-beta or higher. You must update Grid2 addon to the latest version.")
 	return
 end
 
