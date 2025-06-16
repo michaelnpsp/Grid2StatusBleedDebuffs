@@ -1,4 +1,4 @@
-## Interface: 110105
+## Interface: 110107
 ## Title: Grid2 |cfeff7d0aStatus BleedDebuffs|r
 ## Notes: Grid2 status to track physical damage over time debuffs.
 ## Author: MiCHaeL
